@@ -13,19 +13,19 @@ This hackathon is open for all data enthusiasts: Statisticians, Data scientists,
 
 ### FAQs
 
-#####1. Where can I find the dataset and the problem statement for the hackathon?
+##### 1. Where can I find the dataset and the problem statement for the hackathon?
 
 The contest will go live on the designated contest start date and time. There is a timer that is shown at the top of this page which shows the remaining time before the contest goes live. This is when you can access the problem statement and datasets from the problem statement tab.
 
  
 
-#####2. Can I share my approach/code?
+##### 2. Can I share my approach/code?
 
 Absolutely. You are encouraged to share your approach and code file with the community. There is even a facility at the leaderboard to share the link to your code/solution description.
 
 
 
-#####3. I am facing a technical issue with the platform/have a doubt regarding the problem statement. Where can I get support?
+##### 3. I am facing a technical issue with the platform/have a doubt regarding the problem statement. Where can I get support?
 
 Join the AV slack channel by clicking on 'Join Slack Live Chat' button and ask your query at channel: janata_hack
 
@@ -86,5 +86,5 @@ Please ensure that your final submission includes the following:
   
 # HACKATHON URL
 
- ``` url : https://datahack.analyticsvidhya.com/contest/janatahack-healthcare-analytics-ii/```
+ ```url : https://datahack.analyticsvidhya.com/contest/janatahack-healthcare-analytics-ii/```
 
