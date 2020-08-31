@@ -1,4 +1,12 @@
+<p align="center">
+    <img src="front.png", width="1000">
+    <br>
+    <sup>Authors <a href="https://datahack.analyticsvidhya.com/contest/janatahack-healthcare-analytics-ii/" target="_blank">janatahack-healthcare-analytics-ii</a></sup>
+</p>
+
+
 # ABOUT 
+
 
 The healthcare sector has long been an early adopter of and benefited greatly from technological advances. These days, machine learning plays a key role in many health-related realms, including the development of new medical procedures, the handling of patient data, staff management & more.
 
