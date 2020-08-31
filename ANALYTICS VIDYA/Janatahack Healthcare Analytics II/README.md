@@ -94,5 +94,5 @@ Please ensure that your final submission includes the following:
   
 # HACKATHON URL
 
- ```url : https://datahack.analyticsvidhya.com/contest/janatahack-healthcare-analytics-ii/```
+ https://datahack.analyticsvidhya.com/contest/janatahack-healthcare-analytics-ii/
 
