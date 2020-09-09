@@ -11,21 +11,21 @@ Note
 
 # The eight categories of Indian classical dance are as follows:
 
-```Manipuri
+`Manipuri`
 
-Bharatanatyam
+`Bharatanatyam`
 
-Odissi
+`Odissi`
 
-Kathakali
+`Kathakali`
 
-Kathak
+`Kathak`
 
-Sattriya
+`Sattriya`
 
-Kuchipudi
+`Kuchipudi`
 
-Mohiniyattam```
+`Mohiniyattam`
 
 # Data description
 
@@ -82,7 +82,7 @@ Source Limit:	1024 KB
 # RESULT
 
 <p align="center">
-    <img src="front.png", width="1000">
+    <img src="back.png", width="1000">
     <br>
     <sup><a href="https://www.hackerearth.com/challenges/competitive/hackerearth-deep-learning-challenge-identify-dance-form/problems/">Identify The Dance Form</a></sup>
 </p>
