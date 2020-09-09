@@ -11,7 +11,7 @@ Note
 
 # The eight categories of Indian classical dance are as follows:
 
-Manipuri
+`Manipuri
 
 Bharatanatyam
 
@@ -25,7 +25,7 @@ Sattriya
 
 Kuchipudi
 
-Mohiniyattam
+Mohiniyattam`
 
 # Data description
 
@@ -35,11 +35,11 @@ Column Name	Description
 
 Image	Name of Image
 
-target	Category of Image ['manipuri','bharatanatyam','odissi','kathakali','kathak','sattriya','kuchipudi','mohiniyattam']
+target	Category of Image `['manipuri','bharatanatyam','odissi','kathakali','kathak','sattriya','kuchipudi','mohiniyattam']`
 
 The data folder consists of two folders and two .csv files. The details are as follows:
 
-train: Contains 364 images for 8 classes ['manipuri','bharatanatyam','odissi','kathakali','kathak','sattriya','kuchipudi','mohiniyattam']
+train: Contains 364 images for 8 classes `['manipuri','bharatanatyam','odissi','kathakali','kathak','sattriya','kuchipudi','mohiniyattam']`
 
 test: Contains 156 images
 
@@ -77,4 +77,9 @@ Time Limit:	5.0 sec(s) for each input file.
 Memory Limit:	256 MB
 
 Source Limit:	1024 KB
+
+
+# RESULT
+
+247 out of 5846 TOP 4%
 
