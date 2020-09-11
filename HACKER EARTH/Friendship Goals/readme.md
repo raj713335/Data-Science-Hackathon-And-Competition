@@ -64,11 +64,7 @@ Your task is to build a deep learning model that analyzes an image of a gatherin
 
 <p>Please refer to&nbsp;<a href="https://s3-ap-southeast-1.amazonaws.com/he-public-data/Sample%20Submission15b2050.csv" target="_blank">sample_submission.csv</a>&nbsp;for more details</p>
 
-<h2>Evaluation criteria</h2>
 
-<p><span class="mathjax-latex">\(score=100∗recall\_score(actual\_values,predicted\_values)\)</span></p>
-
-<p>&nbsp;</p></div>
 
 
 
@@ -78,7 +74,7 @@ Your task is to build a deep learning model that analyzes an image of a gatherin
 # Evaluation metric
 \(score = {100* f1\_score(actual\_values,predicted\_values,average = 'weighted')}\)
 
-# Note: To avoid any discrepancies in the scoring, ensure all the index column (Image) values in the submitted file match the values in the provided test.csv file.
+## Note: To avoid any discrepancies in the scoring, ensure all the index column (Image) values in the submitted file match the values in the provided test.csv file.
 
 Time Limit:	5.0 sec(s) for each input file.
 
@@ -87,7 +83,7 @@ Memory Limit:	256 MB
 Source Limit:	1024 KB
 
 
-# RESULT
+# RESULT (19 out of 5494 TOP 0.0034741%)
 
 <p align="center">
     <img src="back.png", width="1000">
