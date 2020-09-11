@@ -74,63 +74,6 @@ Your task is to build a deep learning model that analyzes an image of a gatherin
 
 
 
-# The eight categories of Indian classical dance are as follows:
-
-`Manipuri`
-
-`Bharatanatyam`
-
-`Odissi`
-
-`Kathakali`
-
-`Kathak`
-
-`Sattriya`
-
-`Kuchipudi`
-
-`Mohiniyattam`
-
-# Data description
-
-This data set consists of the following two columns:
-
-Column Name	Description
-
-Image	Name of Image
-
-target	Category of Image `['manipuri','bharatanatyam','odissi','kathakali','kathak','sattriya','kuchipudi','mohiniyattam']`
-
-The data folder consists of two folders and two .csv files. The details are as follows:
-
-train: Contains 364 images for 8 classes `['manipuri','bharatanatyam','odissi','kathakali','kathak','sattriya','kuchipudi','mohiniyattam']`
-
-test: Contains 156 images
-
-train.csv: 364 x 2
-
-test.csv: 156 x 1
-
-# Submission format
-
-You are required to write your predictions in a .csv file and upload it by clicking the Upload File button.
-
-# Sample submission
-
-Image,target
-
-96.jpg,manipuri
-
-163.jpg,bharatanatyam
-
-450.jpg,odissi
-
-219.jpg,kathakali
-
-455.jpg,odissi
-
-46.jpg,kathak
 
 # Evaluation metric
 \(score = {100* f1\_score(actual\_values,predicted\_values,average = 'weighted')}\)
@@ -149,10 +92,10 @@ Source Limit:	1024 KB
 <p align="center">
     <img src="back.png", width="1000">
     <br>
-    <sup><a href="https://www.hackerearth.com/challenges/competitive/hackerearth-deep-learning-challenge-identify-dance-form/problems/">Identify The Dance Form</a></sup>
+    <sup><a href="https://www.hackerearth.com/challenges/competitive/hackerearth-deep-learning-challenge-friendship-day/problems/">Friendship Goals</a></sup>
 </p>
 
-247 out of 5846 TOP 4%
+19 out of 5494 TOP 0.0034741%
 
 
 
