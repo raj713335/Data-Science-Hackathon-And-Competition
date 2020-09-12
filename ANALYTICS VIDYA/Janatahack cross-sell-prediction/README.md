@@ -34,7 +34,9 @@ Now, in order to predict, whether the customer would be interested in Vehicle in
 <p><span style="font-size: 16px;"><span style="font-weight: 400;">Building a model to predict whether a customer would be interested in Vehicle Insurance <span style="color: rgb(0, 0, 0); font-family: Times; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;">is&nbsp;</span>extremely helpful for the company because it can then accordingly plan its communication strategy to reach out to those customers and optimise its business model and revenue.&nbsp;</span></span></p>
 <p><span style="font-weight: 400; font-size: 16px;">Now, in order to predict, whether the customer would be interested in Vehicle insurance, you have information about demographics (gender, age, region code type), Vehicles (Vehicle Age, Damage), Policy (Premium, sourcing channel) etc.</span></p>
 <p>&nbsp;</p>
-<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: rgb(74, 74, 74); font-size: 16px; line-height: 22px; font-family: Roboto, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;"><span style="font-size: 30px;">Data Description</span></p>
+
+# Data Description
+<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: rgb(74, 74, 74); font-size: 16px; line-height: 22px; font-family: Roboto, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;"><span style="font-size: 30px;"></span></p>
 <h2 style="box-sizing: border-box; margin: 0.9rem 0px; font-weight: 500; line-height: 1.2; font-size: 22px; font-family: Roboto, sans-serif; padding: 0px; color: rgb(74, 74, 74); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">train.csv</h2>
 <table style="box-sizing: border-box; border-collapse: collapse; color: rgb(74, 74, 74); font-family: Roboto, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; border: none; width: 453pt;">
     <tbody style="box-sizing: border-box;">
@@ -182,9 +184,7 @@ Now, in order to predict, whether the customer would be interested in Vehicle in
     <li style="box-sizing: border-box;"><span style="box-sizing: border-box;">Code file for reproducing the submission, note that it is mandatory to submit your code for a valid final submission</span></li>
 </ol>
 <p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: rgb(74, 74, 74); font-size: 16px; line-height: 22px; font-family: Roboto, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;"><span style="box-sizing: border-box;">&nbsp;</span></p>
-<h2 style="box-sizing: border-box; margin: 0.9rem 0px; font-weight: 500; line-height: 1.2; font-size: 22px; font-family: Roboto, sans-serif; padding: 0px; color: rgb(74, 74, 74); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;"><span style="box-sizing: border-box;">How to Set Final Submission?</span></h2>
-<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: rgb(74, 74, 74); font-size: 16px; line-height: 22px; font-family: Roboto, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;"><span style="box-sizing: border-box;"><iframe src="https://www.youtube.com/embed/knx8aht0xUg" width="700" height="380" frameborder="0" allowfullscreen="allowfullscreen" data-mce-fragment="1" style="box-sizing: border-box; border: 0px; background: none; box-shadow: none;"></iframe></span></p>
-<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: rgb(74, 74, 74); font-size: 16px; line-height: 22px; font-family: Roboto, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;"><br style="box-sizing: border-box;"></p>
+
 <h2 style="box-sizing: border-box; margin: 0.9rem 0px; font-weight: 500; line-height: 1.2; font-size: 22px; font-family: Roboto, sans-serif; padding: 0px; color: rgb(74, 74, 74); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;"><span style="box-sizing: border-box;"><strong style="box-sizing: border-box; font-weight: bolder;">Hackathon Rules</strong></span></h2>
 <ol style="box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: rgb(74, 74, 74); font-family: Roboto, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
     <li style="box-sizing: border-box;"><span style="box-sizing: border-box;"><em style="box-sizing: border-box;">The final standings would be based on private leaderboard score&#39;</em></span></li>
@@ -199,134 +199,4 @@ Now, in order to predict, whether the customer would be interested in Vehicle in
 
 
     
-
-
-<h2 id="data_dictionary">Data</h2>   
-
-    
-    <a class="btn av-btn-outline av-btn"
-        href="/contest/janatahack-cross-sell-prediction/download/test-file"
-        target="blank"
-        >
-       <i class="fa fa-download" ></i>Test File
-    </a>
-    
-
-    
-    <a class="btn av-btn-outline av-btn"
-        href="/contest/janatahack-cross-sell-prediction/download/train-file"
-        target="blank"
-        >
-      <i class="fa fa-download" ></i>Train File
-    </a> 
-
-
-    
-    <a class="sample-submission btn av-btn-outline av-btn"
-        href="/contest/janatahack-cross-sell-prediction/download/sample-submission"
-        target="blank">
-       <i class="fa fa-download" ></i>Sample Submissions
-    </a> 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<p>Your task is to build a deep learning model that analyzes an image of a gathering among friends, detects the age group of the gathering, and classifies them into groups of&nbsp;<strong><em>toddlers</em></strong>,&nbsp;<strong><em>teenagers</em></strong>, or&nbsp;<strong><em>adults</em></strong>.</p>
-
-<h2>Data</h2>
-
-<p><strong>Data description</strong></p>
-
-<p>You must use an external dataset to train your model. The attached dataset link contains the sample data of each category [Toddler&nbsp;| Teenagers | Adults] and test data.</p>
-
-<p><strong>Data files</strong></p>
-
-<table border="1">
-	<tbody>
-		<tr>
-			<td style="text-align:center"><strong>File name</strong></td>
-			<td style="text-align:center"><strong>Description</strong></td>
-		</tr>
-		<tr>
-			<td>Test.zip</td>
-			<td>Contains image files to be classified</td>
-		</tr>
-		<tr>
-			<td>Sample.zip</td>
-			<td>Contains sample image files belonging to each category</td>
-		</tr>
-		<tr>
-			<td>Test.csv</td>
-			<td>Predictions file containing indices of test data and a blank target column</td>
-		</tr>
-		<tr>
-			<td>sample_submission.csv</td>
-			<td>Submission format that must be followed for uploading predictions</td>
-		</tr>
-	</tbody>
-</table>
-
-<p><strong>Data description</strong></p>
-
-<table border="1">
-	<tbody>
-		<tr>
-			<td style="text-align:center"><strong>Column name</strong></td>
-			<td style="text-align:center"><strong>Description</strong></td>
-		</tr>
-		<tr>
-			<td>Filename</td>
-			<td>File name of test data image</td>
-		</tr>
-		<tr>
-			<td>Category</td>
-			<td>Target column [values: 'Toddler'<strong>/</strong>'Teenagers'<strong>/</strong>'Adults']</td>
-		</tr>
-	</tbody>
-</table>
-
-<h2>Submission format</h2>
-
-<p>Please refer to&nbsp;<a href="https://s3-ap-southeast-1.amazonaws.com/he-public-data/Sample%20Submission15b2050.csv" target="_blank">sample_submission.csv</a>&nbsp;for more details</p>
-
-
-
-
-
-
-
-
-# Evaluation metric
-\(score = {100* f1\_score(actual\_values,predicted\_values,average = 'weighted')}\)
-
-## Note: To avoid any discrepancies in the scoring, ensure all the index column (Image) values in the submitted file match the values in the provided test.csv file.
-
-Time Limit:	5.0 sec(s) for each input file.
-
-Memory Limit:	256 MB
-
-Source Limit:	1024 KB
-
-
 # RESULT 
