@@ -1,8 +1,256 @@
-# FRIENDSHIP GOALS 
+# Janatahack: Cross-sell Prediction
 
-To celebrate this precious relationship of friendship on the upcoming International Friendship Day, we bring a deep learning challenge to you: #FriendshipGoals. The Anthropology department of an Ivy League school is planning to study the impact of friendship at different life stages. You have been hired as a deep learning specialist to assist their team in this project.
+Cross-selling identifies products or services that satisfy additional, complementary needs that are unfulfilled by the original product that a customer possesses. As an example, a mouse could be cross-sold to a customer purchasing a keyboard. Oftentimes, cross-selling points users to products they would have purchased anyways; by showing them at the right time, a store ensures they make the sale.
 
-Your task is to build a deep learning model that analyzes an image of a gathering among friends, detects the age group of the gathering, and classifies them into groups of toddlers, teenagers, or adults.
+Cross-selling is prevalent in various domains and industries including banks. For example, credit cards are cross-sold to people registering a savings account. In ecommerce, cross-selling is often utilized on product pages, during the checkout process, and in lifecycle campaigns. It is a highly-effective tactic for generating repeat purchases, demonstrating the breadth of a catalog to customers. Cross-selling can alert users to products they didn't previously know you offered, further earning their confidence as the best retailer to satisfy a particular need.
+
+This weekend we invite you to participate in another Janatahack with the theme of Cross-sell prediction. Stay tuned for the problem statement and datasets this Friday and get a chance to work on a real industry case study along with 250 AV points at stake.
+
+
+# Problem Statement
+
+Your client is an Insurance company that has provided Health Insurance to its customers now they need your help in building a model to predict whether the policyholders (customers) from past year will also be interested in Vehicle Insurance provided by the company.
+
+An insurance policy is an arrangement by which a company undertakes to provide a guarantee of compensation for specified loss, damage, illness, or death in return for the payment of a specified premium. A premium is a sum of money that the customer needs to pay regularly to an insurance company for this guarantee.
+
+For example, you may pay a premium of Rs. 5000 each year for a health insurance cover of Rs. 200,000/- so that if, God forbid, you fall ill and need to be hospitalised in that year, the insurance provider company will bear the cost of hospitalisation etc. for upto Rs. 200,000. Now if you are wondering how can company bear such high hospitalisation cost when it charges a premium of only Rs. 5000/-, that is where the concept of probabilities comes in picture. For example, like you, there may be 100 customers who would be paying a premium of Rs. 5000 every year, but only a few of them (say 2-3) would get hospitalised that year and not everyone. This way everyone shares the risk of everyone else.
+
+Just like medical insurance, there is vehicle insurance where every year customer needs to pay a premium of certain amount to insurance provider company so that in case of unfortunate accident by the vehicle, the insurance provider company will provide a compensation (called ‘sum assured’) to the customer.
+
+Building a model to predict whether a customer would be interested in Vehicle Insurance is extremely helpful for the company because it can then accordingly plan its communication strategy to reach out to those customers and optimise its business model and revenue. 
+
+Now, in order to predict, whether the customer would be interested in Vehicle insurance, you have information about demographics (gender, age, region code type), Vehicles (Vehicle Age, Damage), Policy (Premium, sourcing channel) etc.
+
+
+
+
+
+
+
+<p><span style="font-weight: 400; font-size: 16px;">Your client is an Insurance company that has provided Health Insurance to its customers now they need your help in building a model to predict whether the policyholders (customers) from past year will also be interested in Vehicle Insurance provided by the company.</span></p>
+<p><span style="font-size: 16px;"><span style="font-weight: 400;">An insurance policy is an arrangement by which a company undertakes to provide a guarantee of compensation for specified loss, damage, illness, or death in return for the payment of a specified premium. A premium is a sum of money that the customer needs to pay regularly to an insurance company for this guarantee.</span></span></p>
+<p><span style="font-size: 16px;"><span style="font-weight: 400;">For example, you may pay a premium of Rs. 5000 each year for a health insurance cover of Rs. 200,000/- so that if, God forbid, you fall ill and need to be hospitalised in that year, the insurance provider company will bear the cost of hospitalisation etc. for upto Rs. 200,000. Now if you are wondering how can company bear such high hospitalisation cost when it charges a premium of only Rs. 5000/-, that is where the concept of probabilities comes in picture. For example, like you, there may be 100 customers who would be paying a premium of Rs. 5000 every year, but only a&nbsp;few of them (say 2-3) would get hospitalised that year and not everyone. This way everyone shares the risk of everyone else.</span></span></p>
+<p><span style="font-size: 16px;"><span style="font-weight: 400;">Just like medical insurance, there is vehicle insurance where every year customer needs to pay a premium of certain amount to insurance provider company so that in case of unfortunate accident by the vehicle, the insurance provider company will provide a compensation (called &lsquo;sum assured&rsquo;) to the customer.</span></span></p>
+<p><span style="font-size: 16px;"><span style="font-weight: 400;">Building a model to predict whether a customer would be interested in Vehicle Insurance <span style="color: rgb(0, 0, 0); font-family: Times; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;">is&nbsp;</span>extremely helpful for the company because it can then accordingly plan its communication strategy to reach out to those customers and optimise its business model and revenue.&nbsp;</span></span></p>
+<p><span style="font-weight: 400; font-size: 16px;">Now, in order to predict, whether the customer would be interested in Vehicle insurance, you have information about demographics (gender, age, region code type), Vehicles (Vehicle Age, Damage), Policy (Premium, sourcing channel) etc.</span></p>
+<p>&nbsp;</p>
+<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: rgb(74, 74, 74); font-size: 16px; line-height: 22px; font-family: Roboto, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;"><span style="font-size: 30px;">Data Description</span></p>
+<h2 style="box-sizing: border-box; margin: 0.9rem 0px; font-weight: 500; line-height: 1.2; font-size: 22px; font-family: Roboto, sans-serif; padding: 0px; color: rgb(74, 74, 74); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">train.csv</h2>
+<table style="box-sizing: border-box; border-collapse: collapse; color: rgb(74, 74, 74); font-family: Roboto, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; border: none; width: 453pt;">
+    <tbody style="box-sizing: border-box;">
+        <tr style="box-sizing: border-box;">
+            <td style="box-sizing: border-box; color: black; font-size: 16px; font-weight: 700; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border: 0.5pt solid windowtext; height: 16pt; width: 92pt;">Variable</td>
+            <td style="box-sizing: border-box; color: black; font-size: 16px; font-weight: 700; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-top: 0.5pt solid windowtext; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-image: initial; border-left: none; width: 361pt;">Definition</td>
+        </tr>
+        <tr style="box-sizing: border-box;">
+            <td style="box-sizing: border-box; color: black; font-size: 16px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-left: 0.5pt solid windowtext; border-image: initial; height: 16pt; border-top: none;">id</td>
+            <td style="box-sizing: border-box; color: black; font-size: 16px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-image: initial; border-top: none; border-left: none;">Unique ID for the customer</td>
+        </tr>
+        <tr style="box-sizing: border-box;">
+            <td style="box-sizing: border-box; color: black; font-size: 16px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-left: 0.5pt solid windowtext; border-image: initial; height: 16pt; border-top: none;">Gender</td>
+            <td style="box-sizing: border-box; color: black; font-size: 16px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-image: initial; border-top: none; border-left: none;">Gender of the customer</td>
+        </tr>
+        <tr style="box-sizing: border-box;">
+            <td style="box-sizing: border-box; color: black; font-size: 16px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-left: 0.5pt solid windowtext; border-image: initial; height: 16pt; border-top: none;">Age<br></td>
+            <td style="box-sizing: border-box; color: black; font-size: 16px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-image: initial; border-top: none; border-left: none;">Age of the customer<br></td>
+        </tr>
+        <tr style="box-sizing: border-box;">
+            <td style="box-sizing: border-box; color: black; font-size: 16px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-left: 0.5pt solid windowtext; border-image: initial; height: 16pt; border-top: none;">Driving_License</td>
+            <td style="box-sizing: border-box; color: black; font-size: 16px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-image: initial; border-top: none; border-left: none;">0 : Customer does not have DL, 1 : Customer already has DL</td>
+        </tr>
+        <tr style="box-sizing: border-box;">
+            <td style="box-sizing: border-box; color: black; font-size: 16px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-left: 0.5pt solid windowtext; border-image: initial; height: 16pt; border-top: none;">Region_Code</td>
+            <td style="box-sizing: border-box; color: black; font-size: 16px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-image: initial; border-top: none; border-left: none;">Unique code for the region of the customer</td>
+        </tr>
+        <tr style="box-sizing: border-box;">
+            <td style="box-sizing: border-box; color: black; font-size: 16px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-left: 0.5pt solid windowtext; border-image: initial; height: 16pt; border-top: none;">Previously_Insured</td>
+            <td style="box-sizing: border-box; color: black; font-size: 16px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-image: initial; border-top: none; border-left: none;">1 : Customer already has Vehicle Insurance, 0 : Customer doesn&#39;t have Vehicle Insurance</td>
+        </tr>
+        <tr style="box-sizing: border-box;">
+            <td style="box-sizing: border-box; color: black; font-size: 16px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-left: 0.5pt solid windowtext; border-image: initial; height: 16pt; border-top: none;">Vehicle_Age</td>
+            <td style="box-sizing: border-box; color: black; font-size: 16px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-image: initial; border-top: none; border-left: none;">Age of the Vehicle&nbsp;</td>
+        </tr>
+        <tr style="box-sizing: border-box;">
+            <td style="box-sizing: border-box; color: black; font-size: 16px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-left: 0.5pt solid windowtext; border-image: initial; height: 16pt; border-top: none;">Vehicle_Damage<br></td>
+            <td style="box-sizing: border-box; color: black; font-size: 16px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-image: initial; border-top: none; border-left: none;">1 : Customer got his/her vehicle damaged in the past.<br>0 :
+                <meta charset="utf-8"><span style="color: rgb(0, 0, 0); font-family: Calibri, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">Customer didn&#39;t get his/her vehicle damaged in the past.</span></td>
+        </tr>
+        <tr style="box-sizing: border-box;">
+            <td style="box-sizing: border-box; color: black; font-size: 16px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-left: 0.5pt solid windowtext; border-image: initial; height: 16pt; border-top: none;">Annual_Premium</td>
+            <td style="box-sizing: border-box; color: black; font-size: 16px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-image: initial; border-top: none; border-left: none;">The amount customer needs to pay as premium in the year</td>
+        </tr>
+        <tr style="box-sizing: border-box;">
+            <td style="box-sizing: border-box; color: black; font-size: 16px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-left: 0.5pt solid windowtext; border-image: initial; height: 16pt; border-top: none;">Policy_Sales_Channel</td>
+            <td style="box-sizing: border-box; color: black; font-size: 16px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-image: initial; border-top: none; border-left: none;">Anonymised Code for the channel of outreaching to the customer ie. Different Agents, Over Mail, Over Phone, In Person, etc.</td>
+        </tr>
+        <tr>
+            <td style="box-sizing: border-box; color: black; font-size: 16px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-left: 0.5pt solid windowtext; border-image: initial; height: 16pt; border-top: none;">Vintage</td>
+            <td style="box-sizing: border-box; color: black; font-size: 16px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-image: initial; border-top: none; border-left: none;">Number of Days, Customer has been associated with the company</td>
+        </tr>
+        <tr style="box-sizing: border-box;">
+            <td style="box-sizing: border-box; color: black; font-size: 16px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-left: 0.5pt solid windowtext; border-image: initial; height: 16pt; border-top: none;">Response</td>
+            <td style="box-sizing: border-box; color: black; font-size: 16px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-image: initial; border-top: none; border-left: none;">1 : &nbsp;Customer is interested, 0 : Customer is not interested</td>
+        </tr>
+    </tbody>
+</table>
+<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: rgb(74, 74, 74); font-size: 16px; line-height: 22px; font-family: Roboto, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;"><br></p>
+<h2 style="box-sizing: border-box; margin: 0.9rem 0px; font-weight: 500; line-height: 1.2; font-size: 22px; font-family: Roboto, sans-serif; padding: 0px; color: rgb(74, 74, 74); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">test.csv</h2>
+<table style="box-sizing: border-box; border-collapse: collapse; color: rgb(74, 74, 74); font-family: Roboto, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; border: none; width: 453pt;">
+    <tbody style="box-sizing: border-box;">
+        <tr style="box-sizing: border-box;">
+            <td style="box-sizing: border-box; color: black; font-size: 16px; font-weight: 700; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border: 0.5pt solid windowtext; height: 16pt; width: 92pt;">Variable</td>
+            <td style="box-sizing: border-box; color: black; font-size: 16px; font-weight: 700; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-top: 0.5pt solid windowtext; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-image: initial; border-left: none; width: 361pt;">Definition</td>
+        </tr>
+        <tr style="box-sizing: border-box;">
+            <td style="box-sizing: border-box; color: black; font-size: 16px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-left: 0.5pt solid windowtext; border-image: initial; height: 16pt; border-top: none;">id</td>
+            <td style="box-sizing: border-box; color: black; font-size: 16px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-image: initial; border-top: none; border-left: none;">Unique ID for the customer</td>
+        </tr>
+        <tr style="box-sizing: border-box;">
+            <td style="box-sizing: border-box; color: black; font-size: 16px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-left: 0.5pt solid windowtext; border-image: initial; height: 16pt; border-top: none;">Gender</td>
+            <td style="box-sizing: border-box; color: black; font-size: 16px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-image: initial; border-top: none; border-left: none;">Gender of the customer</td>
+        </tr>
+        <tr style="box-sizing: border-box;">
+            <td style="box-sizing: border-box; color: black; font-size: 16px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-left: 0.5pt solid windowtext; border-image: initial; height: 16pt; border-top: none;">Age<br></td>
+            <td style="box-sizing: border-box; color: black; font-size: 16px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-image: initial; border-top: none; border-left: none;">Age of the customer<br></td>
+        </tr>
+        <tr style="box-sizing: border-box;">
+            <td style="box-sizing: border-box; color: black; font-size: 16px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-left: 0.5pt solid windowtext; border-image: initial; height: 16pt; border-top: none;">Driving_License</td>
+            <td style="box-sizing: border-box; color: black; font-size: 16px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-image: initial; border-top: none; border-left: none;">0 : Customer does not have DL, 1 : Customer already has DL</td>
+        </tr>
+        <tr style="box-sizing: border-box;">
+            <td style="box-sizing: border-box; color: black; font-size: 16px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-left: 0.5pt solid windowtext; border-image: initial; height: 16pt; border-top: none;">Region_Code</td>
+            <td style="box-sizing: border-box; color: black; font-size: 16px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-image: initial; border-top: none; border-left: none;">Unique code for the region of the customer</td>
+        </tr>
+        <tr style="box-sizing: border-box;">
+            <td style="box-sizing: border-box; color: black; font-size: 16px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-left: 0.5pt solid windowtext; border-image: initial; height: 16pt; border-top: none;">Previously_Insured</td>
+            <td style="box-sizing: border-box; color: black; font-size: 16px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-image: initial; border-top: none; border-left: none;">1 : Customer already has Vehicle Insurance, 0 : Customer doesn&#39;t have Vehicle Insurance</td>
+        </tr>
+        <tr style="box-sizing: border-box;">
+            <td style="box-sizing: border-box; color: black; font-size: 16px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-left: 0.5pt solid windowtext; border-image: initial; height: 16pt; border-top: none;">Vehicle_Age</td>
+            <td style="box-sizing: border-box; color: black; font-size: 16px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-image: initial; border-top: none; border-left: none;">Age of the Vehicle&nbsp;</td>
+        </tr>
+        <tr style="box-sizing: border-box;">
+            <td style="box-sizing: border-box; color: black; font-size: 16px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-left: 0.5pt solid windowtext; border-image: initial; height: 16pt; border-top: none;">Vehicle_Damage<br></td>
+            <td style="box-sizing: border-box; color: black; font-size: 16px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-image: initial; border-top: none; border-left: none;">1 : Customer got his/her vehicle damaged in the past.<br>0 :
+                <meta charset="utf-8"><span style="color: rgb(0, 0, 0); font-family: Calibri, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">Customer didn&#39;t get his/her vehicle damaged in the past.</span></td>
+        </tr>
+        <tr style="box-sizing: border-box;">
+            <td style="box-sizing: border-box; color: black; font-size: 16px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-left: 0.5pt solid windowtext; border-image: initial; height: 16pt; border-top: none;">Annual_Premium</td>
+            <td style="box-sizing: border-box; color: black; font-size: 16px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-image: initial; border-top: none; border-left: none;">The amount customer needs to pay as premium in the year</td>
+        </tr>
+        <tr style="box-sizing: border-box;">
+            <td style="box-sizing: border-box; color: black; font-size: 16px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-left: 0.5pt solid windowtext; border-image: initial; height: 16pt; border-top: none;">Policy_Sales_Channel</td>
+            <td style="box-sizing: border-box; color: black; font-size: 16px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-image: initial; border-top: none; border-left: none;">Anonymised Code for the channel of outreaching to the customer ie. Different Agents, Over Mail, Over Phone, In Person, etc.</td>
+        </tr>
+        <tr>
+            <td style="box-sizing: border-box; color: black; font-size: 16px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-left: 0.5pt solid windowtext; border-image: initial; height: 16pt; border-top: none;">Vintage</td>
+            <td style="box-sizing: border-box; color: black; font-size: 16px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-image: initial; border-top: none; border-left: none;">Number of Days, Customer has been associated with the company</td>
+        </tr>
+    </tbody>
+</table>
+<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: rgb(74, 74, 74); font-size: 16px; line-height: 22px; font-family: Roboto, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;"><br></p>
+<h2 style="box-sizing: border-box; margin: 0.9rem 0px; font-weight: 500; line-height: 1.2; font-size: 22px; font-family: Roboto, sans-serif; padding: 0px; color: rgb(74, 74, 74); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">sample_submission.csv</h2>
+<table style="box-sizing: border-box; border-collapse: collapse; color: rgb(74, 74, 74); font-family: Roboto, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; border: none; width: 453pt;">
+    <tbody style="box-sizing: border-box;">
+        <tr style="box-sizing: border-box;">
+            <td style="box-sizing: border-box; color: black; font-size: 16px; font-weight: 700; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border: 0.5pt solid windowtext; height: 16pt; width: 92pt;">Variable</td>
+            <td style="box-sizing: border-box; color: black; font-size: 16px; font-weight: 700; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-top: 0.5pt solid windowtext; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-image: initial; border-left: none; width: 361pt;">Definition</td>
+        </tr>
+        <tr style="box-sizing: border-box;">
+            <td style="box-sizing: border-box; color: black; font-size: 16px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-left: 0.5pt solid windowtext; border-image: initial; height: 16pt; border-top: none;">id</td>
+            <td style="box-sizing: border-box; color: black; font-size: 16px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-image: initial; border-top: none; border-left: none;">Unique ID</td>
+        </tr>
+        <tr style="box-sizing: border-box;">
+            <td style="box-sizing: border-box; color: black; font-size: 16px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-left: 0.5pt solid windowtext; border-image: initial; height: 16pt; border-top: none;">Response</td>
+            <td style="box-sizing: border-box; color: black; font-size: 16px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-image: initial; border-top: none; border-left: none;">Probability of Customer being interested in Vehicle Loan</td>
+        </tr>
+    </tbody>
+</table>
+<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: rgb(74, 74, 74); font-size: 16px; line-height: 22px; font-family: Roboto, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;"><strong style="box-sizing: border-box; font-weight: bolder; text-align: inherit;"><br style="box-sizing: border-box;"></strong></p>
+<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: rgb(74, 74, 74); font-size: 16px; line-height: 22px; font-family: Roboto, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;"><br style="box-sizing: border-box;"></p>
+<h2 style="box-sizing: border-box; margin: 0.9rem 0px; font-weight: 500; line-height: 1.2; font-size: 22px; font-family: Roboto, sans-serif; padding: 0px; color: rgb(74, 74, 74); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">How to Make a Submission?</h2>
+<h2 style="box-sizing: border-box; margin: 0.9rem 0px; font-weight: 500; line-height: 1.2; font-size: 22px; font-family: Roboto, sans-serif; padding: 0px; color: rgb(74, 74, 74); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;"><iframe src="https://www.youtube.com/embed/zevnI9TgTtA" width="700" height="380" frameborder="0" allowfullscreen="allowfullscreen" data-mce-fragment="1" style="box-sizing: border-box; border: 0px; background: none; box-shadow: none;"></iframe></h2>
+<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: rgb(74, 74, 74); font-size: 16px; line-height: 22px; font-family: Roboto, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;"><br style="box-sizing: border-box;"></p>
+<h2 style="box-sizing: border-box; margin: 0.9rem 0px; font-weight: 500; line-height: 1.2; font-size: 22px; font-family: Roboto, sans-serif; padding: 0px; color: rgb(74, 74, 74); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">Evaluation Metric</h2>
+<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: rgb(74, 74, 74); font-size: 16px; line-height: 22px; font-family: Roboto, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">The evaluation metric for this hackathon is ROC_AUC score.</p>
+<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: rgb(74, 74, 74); font-size: 16px; line-height: 22px; font-family: Roboto, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;"><br style="box-sizing: border-box;"></p>
+<h2 style="box-sizing: border-box; margin: 0.9rem 0px; font-weight: 500; line-height: 1.2; font-size: 22px; font-family: Roboto, sans-serif; padding: 0px; color: rgb(74, 74, 74); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;"><strong style="box-sizing: border-box; font-weight: bolder;">Public and Private split</strong></h2>
+<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: rgb(74, 74, 74); font-size: 16px; line-height: 22px; font-family: Roboto, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">The public leaderboard is based on 40% of test data, while final rank would be decided on remaining 60% of test data (which is private leaderboard)</p>
+<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: rgb(74, 74, 74); font-size: 16px; line-height: 22px; font-family: Roboto, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;"><span style="box-sizing: border-box;">&nbsp;</span></p>
+<h2 style="box-sizing: border-box; margin: 0.9rem 0px; font-weight: 500; line-height: 1.2; font-size: 22px; font-family: Roboto, sans-serif; padding: 0px; color: rgb(74, 74, 74); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;"><span style="box-sizing: border-box;"><strong style="box-sizing: border-box; font-weight: bolder;">Guidelines for Final Submission</strong></span></h2>
+<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: rgb(74, 74, 74); font-size: 16px; line-height: 22px; font-family: Roboto, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;"><span style="box-sizing: border-box;">Please ensure that your final submission includes the following:</span></p>
+<ol style="box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: rgb(74, 74, 74); font-family: Roboto, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+    <li style="box-sizing: border-box;"><span style="box-sizing: border-box;">Solution file containing the predicted response of the customer (Probability of response 1)</span></li>
+    <li style="box-sizing: border-box;"><span style="box-sizing: border-box;">Code file for reproducing the submission, note that it is mandatory to submit your code for a valid final submission</span></li>
+</ol>
+<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: rgb(74, 74, 74); font-size: 16px; line-height: 22px; font-family: Roboto, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;"><span style="box-sizing: border-box;">&nbsp;</span></p>
+<h2 style="box-sizing: border-box; margin: 0.9rem 0px; font-weight: 500; line-height: 1.2; font-size: 22px; font-family: Roboto, sans-serif; padding: 0px; color: rgb(74, 74, 74); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;"><span style="box-sizing: border-box;">How to Set Final Submission?</span></h2>
+<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: rgb(74, 74, 74); font-size: 16px; line-height: 22px; font-family: Roboto, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;"><span style="box-sizing: border-box;"><iframe src="https://www.youtube.com/embed/knx8aht0xUg" width="700" height="380" frameborder="0" allowfullscreen="allowfullscreen" data-mce-fragment="1" style="box-sizing: border-box; border: 0px; background: none; box-shadow: none;"></iframe></span></p>
+<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: rgb(74, 74, 74); font-size: 16px; line-height: 22px; font-family: Roboto, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;"><br style="box-sizing: border-box;"></p>
+<h2 style="box-sizing: border-box; margin: 0.9rem 0px; font-weight: 500; line-height: 1.2; font-size: 22px; font-family: Roboto, sans-serif; padding: 0px; color: rgb(74, 74, 74); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;"><span style="box-sizing: border-box;"><strong style="box-sizing: border-box; font-weight: bolder;">Hackathon Rules</strong></span></h2>
+<ol style="box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: rgb(74, 74, 74); font-family: Roboto, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+    <li style="box-sizing: border-box;"><span style="box-sizing: border-box;"><em style="box-sizing: border-box;">The final standings would be based on private leaderboard score&#39;</em></span></li>
+    <li style="box-sizing: border-box;">ID variable is not allowed to be used as part of the model</li>
+    <li style="box-sizing: border-box;"><span style="box-sizing: border-box;">Setting the final submission is recommended. Without a final submission, the submission corresponding to best public score will be taken as the final submission</span></li>
+    <li style="box-sizing: border-box;"><span style="box-sizing: border-box;">Use of external datasets or labels from open source will lead to disqualification from the leaderboard</span></li>
+    <li style="box-sizing: border-box;"><span style="box-sizing: border-box;">Entries submitted after the contest is closed, will not be considered</span></li>
+    <li style="box-sizing: border-box;"><span style="box-sizing: border-box;">The code file pertaining to your final submission is mandatory while setting final submission for AV Points</span></li>
+    <li style="box-sizing: border-box;"><span style="box-sizing: border-box;">Throughout the hackathon, you are expected to respect fellow hackers and act with high integrity.</span></li>
+</ol>
+  
+
+
+    
+
+
+<h2 id="data_dictionary">Data</h2>   
+
+    
+    <a class="btn av-btn-outline av-btn"
+        href="/contest/janatahack-cross-sell-prediction/download/test-file"
+        target="blank"
+        >
+       <i class="fa fa-download" ></i>Test File
+    </a>
+    
+
+    
+    <a class="btn av-btn-outline av-btn"
+        href="/contest/janatahack-cross-sell-prediction/download/train-file"
+        target="blank"
+        >
+      <i class="fa fa-download" ></i>Train File
+    </a> 
+
+
+    
+    <a class="sample-submission btn av-btn-outline av-btn"
+        href="/contest/janatahack-cross-sell-prediction/download/sample-submission"
+        target="blank">
+       <i class="fa fa-download" ></i>Sample Submissions
+    </a> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -83,13 +331,4 @@ Memory Limit:	256 MB
 Source Limit:	1024 KB
 
 
-# RESULT (19 out of 5494 TOP 0.0034741%)
-
-<p align="center">
-    <img src="back.png", width="1000">
-    <br>
-    <sup><a href="https://www.hackerearth.com/challenges/competitive/hackerearth-deep-learning-challenge-friendship-day/problems/">Friendship Goals</a></sup>
-</p>
-
-19 out of 5494 TOP 0.0034741%
-
+# RESULT 
