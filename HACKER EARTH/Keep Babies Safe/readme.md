@@ -1,3 +1,9 @@
+ <p align="center">
+    <img src="SRC/front.png", width="1000">
+    <br>
+    <sup><a href="https://www.hackerearth.com/challenges/competitive/hackerearth-deep-learning-challenge-baby-safety/machine-learning/identify-baby-product-and-brand-7-6386aaf6/" target="_blank">Keep Babies Safe</a></sup>
+</p>
+
  <hr class="hr prob-hr"/>
                         <div class="problem-title large-20 darker less-margin-2-bottom content">Keep babies safe</div>
                         <div class="content prob-title-content">
