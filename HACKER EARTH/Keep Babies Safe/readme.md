@@ -3,17 +3,8 @@
                         <div class="content prob-title-content">
                             <div class="float-left light small">Max. score: 100</div>
                             
-                            <div class="clear"></div>
-                        </div> <!-- content -->
-                        
-
-                        
-                    </div> <!-- top-content-wrapper -->
-
-                    <div class="problem-desc details-div body-font">
-                        <div class="problem-description line-height-18 less-margin-2 darker content">
-                            <div id="fullscreen-problem-title" class="problem-title medium-margin weight-700 hidden">Keep babies safe</div>
-                            <h1>Problem statement</h1>
+                           
+<h1>Problem statement</h1>
 
 <p>A renowned hypermarket, that has multiple stores, is all set to grow its business. As a part of its expansion, the owner plans to introduce an exclusive section for newborns and toddlers. To help him expand its business, teams across all stores have collated numerous images that consist of products and goods purchased for children.&nbsp;</p>
 
