@@ -1,5 +1,5 @@
  <p align="center">
-    <img src="SRC/front.png">
+    <img src="SRC/front.png", width="1400">
     <br>
     <sup><a href="https://www.hackerearth.com/challenges/competitive/hackerearth-deep-learning-challenge-baby-safety/machine-learning/identify-baby-product-and-brand-7-6386aaf6/" target="_blank">Keep Babies Safe</a></sup>
 </p>
