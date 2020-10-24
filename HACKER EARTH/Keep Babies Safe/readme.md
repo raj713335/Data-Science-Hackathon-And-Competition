@@ -117,4 +117,4 @@
     <sup><a href="https://www.hackerearth.com/challenges/competitive/hackerearth-deep-learning-challenge-baby-safety/machine-learning/identify-baby-product-and-brand-7-6386aaf6/">Keep Babies Safe</a></sup>
 </p>
 
-19 out of 5494 TOP 0.0034741%
+13 out of 5494 TOP 0.0034741%
