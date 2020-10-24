@@ -107,3 +107,14 @@
 
 <p><span class="mathjax-latex">\(s1 = f1\_score(actual['Class\_of\_image'],predicted['Class\_of\_image'],average = 'weighted')\\ s2 = len(actual['Brand\_name'].intersection(predicted['Brand\_name']))/len(actual['Brand\_name'].union(predicted['Brand\_name']))\\ score = 0.7*s1 + 0.3*s2\)</span></p>
                             
+
+
+# RESULT (13 out of 5494 TOP 0.0034741%)
+
+<p align="center">
+    <img src="SRC/back.png", width="1400">
+    <br>
+    <sup><a href="https://www.hackerearth.com/challenges/competitive/hackerearth-deep-learning-challenge-baby-safety/machine-learning/identify-baby-product-and-brand-7-6386aaf6/">Keep Babies Safe</a></sup>
+</p>
+
+19 out of 5494 TOP 0.0034741%
