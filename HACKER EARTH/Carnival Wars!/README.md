@@ -1,34 +1,16 @@
  <p align="center">
     <img src="SRC/front.png", width="1400">
     <br>
-    <sup><a href="https://www.hackerearth.com/challenges/competitive/hackerearth-deep-learning-challenge-baby-safety/machine-learning/identify-baby-product-and-brand-7-6386aaf6/" target="_blank">Keep Babies Safe</a></sup>
+    <sup><a href="https://www.hackerearth.com/challenges/competitive/hackerearth-machine-learning-challenge-predict-selling-price/problems/" target="_blank">Carnival Wars</a></sup>
 </p>
 
 
 
-<span class="light">/</span>
-                            <span class="dark"> Predict the price</span>
+<span class="light"></span>
+<span class="dark"> Predict the price</span>
                         </div>
                         
 
-                        <!-- Only on page inside challenge -->
-                        
-                        <hr class="hr prob-hr"/>
-                        <div class="problem-title large-20 darker less-margin-2-bottom content">Predict the price</div>
-                        <div class="content prob-title-content">
-                            <div class="float-left light small">Max. score: 100</div>
-                            
-                            <div class="clear"></div>
-                        </div> <!-- content -->
-                        
-
-                        
-                    </div> <!-- top-content-wrapper -->
-
-                    <div class="problem-desc details-div body-font">
-                        <div class="problem-description line-height-18 less-margin-2 darker content">
-                            <div id="fullscreen-problem-title" class="problem-title medium-margin weight-700 hidden">Predict the price</div>
-                            <h2><strong>Problem statement</strong></h2>
 
 <p>Halloween is a night of costumes, fun, and candy that takes place every year on October 31. On&nbsp;this day people dress up in various costumes that have a scary overtone and go&nbsp;trick-or-treating to gather candy.</p>
 
