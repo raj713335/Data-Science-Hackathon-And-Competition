@@ -166,12 +166,5 @@
 <p>&nbsp;</p>
 
 
-# RESULT (13 out of 5494 TOP 0.0034741%)
+# RESULT 86.86%
 
-<p align="center">
-    <img src="SRC/back.png", width="1400">
-    <br>
-    <sup><a href="https://www.hackerearth.com/challenges/competitive/hackerearth-deep-learning-challenge-baby-safety/machine-learning/identify-baby-product-and-brand-7-6386aaf6/">Keep Babies Safe</a></sup>
-</p>
-
-13 out of 5494 TOP 0.0034741%
