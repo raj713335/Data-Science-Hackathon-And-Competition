@@ -4,62 +4,184 @@
     <sup><a href="https://www.hackerearth.com/challenges/competitive/hackerearth-deep-learning-challenge-baby-safety/machine-learning/identify-baby-product-and-brand-7-6386aaf6/" target="_blank">Keep Babies Safe</a></sup>
 </p>
 
- <title>   Predict the price - HackerEarth Machine Learning Challenge: Carnival Wars!  | HackerEarth  </title>
-
-        
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-
-        
-        <link rel="shortcut icon" href="https://static-fastly.hackerearth.com/static/hackerearth/images/logo/HE_identity.png" type="image/x-icon">
-        
-
-        
-
-        
-            <link rel="stylesheet" href="https://static-fastly.hackerearth.com/static/base/base_common_combined.d3472c656cf4.css"/>
-            <link rel="stylesheet" href="https://static-fastly.hackerearth.com/static/base/marketing_footer.20caf7067b08.css"/>
-            <link rel="stylesheet" href="https://static-fastly.hackerearth.com/static/js/tooltip/tipTip.4cc4f68d44b4.css"/>
-            <link rel="stylesheet" href="https://static-fastly.hackerearth.com/static/offline/offline-theme-slide.12bc3d4c96b4.css"/>
-            <link rel="stylesheet" href="https://static-fastly.hackerearth.com/static/css/font-awesome-4.7.0/css/font-awesome.min.269550530cc1.css"/>
-            <link rel="stylesheet" href="https://static-fastly.hackerearth.com/static/css/opensans/opensans.06e0aa7529dc.css"/>
-            <link rel="stylesheet" href="https://static-fastly.hackerearth.com/static/css/proxima-nova/proxima-nova.61f8e8377456.css"/>
-            <link rel="stylesheet" href="https://static-fastly.hackerearth.com/static/css/hack/hack.8b30169f8a8b.css"/>
-            <link rel="stylesheet" href="https://static-fastly.hackerearth.com/static/css/unicons.9eda5fc182c1.css"/>
-        
-
-        
 
 
-        
+<span class="light">/</span>
+                            <span class="dark"> Predict the price</span>
+                        </div>
+                        
 
-        <!-- Make the static variable available for all js files -->
-        <script>
-            var STATIC_URL = "https://static-fastly.hackerearth.com/static/";
-            var RECAPTCHA_V3_SITE_KEY = "6LeyqcIZAAAAAOcy_5WJORJsuu9zmbZZxIRp4-em";
-        </script>
+                        <!-- Only on page inside challenge -->
+                        
+                        <hr class="hr prob-hr"/>
+                        <div class="problem-title large-20 darker less-margin-2-bottom content">Predict the price</div>
+                        <div class="content prob-title-content">
+                            <div class="float-left light small">Max. score: 100</div>
+                            
+                            <div class="clear"></div>
+                        </div> <!-- content -->
+                        
 
-        <!-- Store CSRF_COOKIE -->
-        <script>
-            var CSRF_COOKIE_USED = "True";
-            var CSRF_COOKIE = "kN4na2VI7e3Xv6r5sNUgkQMUMHzbodZxZpvof6JoFNBq2CH0ReGa5PLEwbF4J3hm";
-        </script>
+                        
+                    </div> <!-- top-content-wrapper -->
 
-        
-        
-        <script src="https://www.google.com/recaptcha/api.js?render=6LeyqcIZAAAAAOcy_5WJORJsuu9zmbZZxIRp4-em"></script>
-        
+                    <div class="problem-desc details-div body-font">
+                        <div class="problem-description line-height-18 less-margin-2 darker content">
+                            <div id="fullscreen-problem-title" class="problem-title medium-margin weight-700 hidden">Predict the price</div>
+                            <h2><strong>Problem statement</strong></h2>
 
-        
-<link rel="stylesheet" href="https://static-fastly.hackerearth.com/static/hackathon/problem1.403670c658fa.css"/>
-<link rel="stylesheet" href="https://static-fastly.hackerearth.com/static/hackathon/non_hiring_problem.7c9a8cb39270.css"/>
-<link rel="stylesheet" href="https://static-fastly.hackerearth.com/static/markdown/pagedown.adcb2f5764da.css"/>
-<link rel="stylesheet" href="https://static-fastly.hackerearth.com/static/google-code-prettify/prettify.26e70f1bc891.css"/>
+<p>Halloween is a night of costumes, fun, and candy that takes place every year on October 31. On&nbsp;this day people dress up in various costumes that have a scary overtone and go&nbsp;trick-or-treating to gather candy.</p>
 
+<p>This year, on Halloween,&nbsp;there is a&nbsp;carnival in your neighborhood. Besides the various games, there are also 50 stalls that are selling various products, which fall under&nbsp;various categories.</p>
 
+<p>Your task is to predict the selling price of the products based on the provided features.&nbsp;</p>
 
-    </head>
+<h2><strong>Data description</strong></h2>
 
-    <body >
+<p>The data folder consists of the following three&nbsp;<strong>.csv</strong> files:</p>
+
+<ul>
+	<li><strong>train.csv</strong>:&nbsp;(<span class="mathjax-latex">\(6368 \times15\)</span>)</li>
+	<li><strong>test.csv</strong>:&nbsp;(<span class="mathjax-latex">\(3430\times14\)</span>)</li>
+	<li><strong>submission.csv</strong>: (<span class="mathjax-latex">\(5\times 2\)</span>)</li>
+</ul>
+
+<table border="1">
+	<tbody>
+		<tr>
+			<td style="text-align:center"><strong>Column name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;</strong></td>
+			<td style="text-align:center"><strong>Description</strong></td>
+		</tr>
+		<tr>
+			<td>
+			<p>Product_id</p>
+			</td>
+			<td>
+			<p>Unique ID of each product</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>Stall_no</p>
+			</td>
+			<td>
+			<p>Represents the number of stalls in the carnival (1-50)</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>instock_date</p>
+			</td>
+			<td>
+			<p>Represents the date and time on&nbsp;which the product was bought</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>Market_Category</p>
+			</td>
+			<td>
+			<p>Represents the different market categories that the products belong to</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>Customer_name</p>
+			</td>
+			<td>
+			<p>Represents the names of the customers</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>Loyalty_customer</p>
+			</td>
+			<td>
+			<p>Represents if a customer is a loyal customer</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>Product_Category</p>
+			</td>
+			<td>
+			<p>Represents the 10 different product categories that the products belong to</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>Grade</p>
+			</td>
+			<td>
+			<p>Represents the quality of products</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>Demand</p>
+			</td>
+			<td>
+			<p>Represents the demand for the products being sold at&nbsp;the carnival</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>Discount_avail</p>
+			</td>
+			<td>
+			<p>Represents whether a product is being sold at a&nbsp;discount or not</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>charges_1</p>
+			</td>
+			<td>
+			<p>Represents the&nbsp;types of charges applied on the products in the carnival</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>charges_2 (%)</p>
+			</td>
+			<td>
+			<p>Represents the&nbsp;types of charges applied on the products in the carnival</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>Minimum_price</p>
+			</td>
+			<td>
+			<p>Represents the minimum price of a product</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>Maximum_price</p>
+			</td>
+			<td>
+			<p>Represents the maximum price of a product</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>Selling_Price</p>
+			</td>
+			<td>
+			<p>Represents the selling price of the product in the carnival</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2><strong>Evaluation metric</strong></h2>
+
+<p><span class="mathjax-latex">\(score = {max(0,100 - RMSLE(actual\_values,predicted\_values))}\)</span></p>
+
+<p><strong>Note</strong>: To avoid any discrepancies in the scoring, you must&nbsp;ensure that all the column values in the&nbsp;<strong>Product_id</strong>&nbsp;column in the file that you submit&nbsp;match the values in the&nbsp;<strong>test.csv</strong>&nbsp;provided.</p>
+
+<p>&nbsp;</p>
 
 
 # RESULT (13 out of 5494 TOP 0.0034741%)
